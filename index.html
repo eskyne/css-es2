@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>03 - Flexbox</title>
+    <style>
+        /*Normalize body*/
+        body {
+            margin: 0px;
+        }
+
+        :root{
+            --color1: #2b2b2b;
+            --color2: #2b2bb2;
+
+        }
+
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+
+            /*Aggiunta personale*/
+            background-color: cadetblue;
+            align-items: center;
+            border-right: 1px solid #2b2b2b;
+        }
+
+        .box-logo > img {
+            display: block;
+            width: 100%;
+        }
+
+        .sidebar-link-item {
+            flex: 1;
+
+            /*Aggiunta personale*/
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .sidebar-link {
+            color: #2b2b2b;
+
+            /*Aggiunta personale*/
+            background-color: bisque;
+            padding: 10px 40px;
+            border: 1px solid var(--color1);
+        }
+
+        .sidebar-link:hover {
+            color: var(--color2);
+            border-color: var(--color2); /*Aggiunta personale*/
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .sidebar-avatar > img{
+            /*Voglio ritagliare un'immagine rotonda 50x50*/
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+
+            margin: 10px 0px 5px 0px; /*Aggiunta personale*/
+        }
+
+        .sidebar-author{
+            margin: 5px 0px 10px 0px; /*Aggiunta personale*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="box-logo">
+            <img src="assets/placeholder.webp" alt="logo" />
+        </div>
+        <div class="sidebar-link-item">
+            <a class="sidebar-link" href="#">Link 1</a>
+        </div>
+        <div class="sidebar-link-item">
+            <a class="sidebar-link" href="#">Link 2</a>
+        </div>
+        <div class="sidebar-link-item">
+            <a class="sidebar-link" href="#">Link 3</a>
+        </div>
+        <div class="sidebar-link-item">
+            <a class="sidebar-link" href="#">Link 4</a>
+        </div>
+        <div class="sidebar-avatar">
+            <img src="assets/logo.png" alt="avatar" />
+        </div>
+        <div class="sidebar-author">
+            <span>Author Name</span>
+        </div>
+    </div>
+</body>
+
+</html>
